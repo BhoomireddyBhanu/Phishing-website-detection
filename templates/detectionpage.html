@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection</title>
+<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+<link rel="stylesheet" href="/static/styles/styles.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card">
+    <img src="/static/images/dont_trust.webp" alt="dont_trust" class="card-img-top card-img">
+        <center><hr style="width:95%;"></center>
+        <div class="card-body">
+            <h3 class="card-title text-danger mt-5  mr-5 mb-2">
+                Don't trust everyone on internet
+            </h3>
+            <hr style="width: 200px; margin-left: 30px;">
+                <div class="card-text text-muted m-5">
+                    <p class="card-text text-danger">Phishing emails or sms are designed to prompt you to click links provided within the email to verify or change your account in some way.  Often, the links included in the email are ways for fraudsters to install malicious software (also called Malware) onto the computer or device you use to access your email.  This Malware can be used to obtain personal information too.</p>
+                    <p style="font-weight: bold;">Be aware of fraud happens online</p>
+                    <ul>
+                        <li>Keep Financial Data Separate</li>
+                        <li>Know Who’s Asking</li>
+                        <li>Keep Your Passwords Secret</li>
+                        <li>No Phishing Allowed</li>
+                        <li>Protect Your Computer</li>
+                    </ul>
+                    <a href="https://www.bajajfinserv.in/insights/protect-yourself-from-smishing-scams-a-guide" target="_blank">click here to learn more</a>
+                </div>
+        </div>
+    </div>
+    
+        {% if prediction==1 %}
+            <div style="align-items:center">
+                <p style="font-weight:bold; align-items:center">Prediction:</p>
+                <p style="font-size:large; color:red">
+                    The given URL is a phising Website</p>
+            </div>
+        {% else %}
+            <div style="align-items:center">
+                <p style="font-weight:bold; align-items:center">Prediction:</p>
+                <p style="font-size:large; color:green">
+                    The given URL is not a phising Website</p>
+                </div>
+        {% endif %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
